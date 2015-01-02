@@ -1,0 +1,24 @@
+<ul>
+<% if @manufacturer.errors.any? %>
+  <li>
+  <% @manufacturer.errors.full_messages.each do |msg| %>
+
+    <%= msg %>
+
+  <% end %>
+  </li>
+<% end %>
+</ul>
+<%= form_for [@manufacturer] do |m| %>
+
+  <%= m.label :name, "Name" %>
+  <%= m.text_field :name %>
+
+  <%= m.label :nation, "Nation" %>
+  <%= m.text_field :nation %>
+
+  <%= m.submit "Submit" %>
+
+<% end %>
+
+<a href="/">Back</a>
