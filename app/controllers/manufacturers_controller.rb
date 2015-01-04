@@ -1,7 +1,8 @@
 class ManufacturersController < ApplicationController
 
   def index
-    @manufactuers = Manufacturer.all
+    @manufacturers = Manufacturer.all
+    @vehicles = Vehicle.all
   end
 
   def new

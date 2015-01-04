@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :manufacturers do
-    resources :vehicles
+
   end
 
 

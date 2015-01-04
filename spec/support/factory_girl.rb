@@ -11,4 +11,12 @@ FactoryGirl.define do
     sequence(:name) {|n| "Ford#{n}" }
     nation "United States"
   end
+
+  factory :vehicle do
+
+    sequence(:mileage) {|n| 10000 + n }
+    color "blue"
+    year 2014
+    manufacturer = "Ford"
+  end
 end

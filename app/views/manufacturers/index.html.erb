@@ -2,4 +2,20 @@
 
 <h4>Would you like to add a new manufacturer?</h4><a href="/manufacturers/new">Add new</a>
 
-<h4>Would you like to add a new vehicle to the inventory?</h4><a href="">Add new√</a>
+<h4>Would you like to add a new vehicle to the inventory?</h4><a href="/vehicles/new">Add new</a>
+<div>
+  <ul>
+    <% @manufacturers.each do |manufacturer| %>
+      <h5><%= manufacturer.name %></h5>
+
+          <% @vehicles.each do |vehicle| %>
+
+            <% if vehicle.manufacturer_id == manufacturer.id %>
+              <p><li><%= "#{vehicle.year} #{vehicle.mileage} #{vehicle.color}" %></li></p>
+            <% end %>
+
+          <% end %>
+
+    <% end %>
+  </ul>
+</div>
