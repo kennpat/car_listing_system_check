@@ -15,6 +15,7 @@ feature "inventory manager wishes to add a new vehicle to the lot" do
     fill_in "Mileage", with: new_car.mileage
 
     select("Ford3", from: "Manufacturer")
+    fill_in "Description", with: "She has a few dings, but the radio still works."
     click_on "Submit"
 
     expect(page).to have_content("Vehicle successfully added")

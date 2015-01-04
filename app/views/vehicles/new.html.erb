@@ -22,6 +22,9 @@
   <%= c.label :manufacturer, "Manufacturer" %>
   <%= c.select :manufacturer, @man_name %>
 
+  <%= c.label :description, "Description" %>
+  <%= c.text_area :description, :size => "30x10" %>
+
   <%= c.submit "Submit" %>
 
 <% end %>
